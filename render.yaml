@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: ep-hidden-dew-a16lwonk-pooler.ap-southeast-1.aws.neon.tech
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: neondb
+      - key: DB_POSTGRESDB_USER
+        value: neondb_owner
+      - key: DB_POSTGRESDB_PASSWORD
+        value: npg_uX1nPLtDhiH8
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: changeme
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
